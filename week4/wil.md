@@ -43,6 +43,8 @@ settings.py에 우리가 만든 questions app을 등록해줘야한다.
 
 INSTALLED_APPS 에 `questions.apps.QuestionsConfig`를 추가했었다.
 
+### urls.py
+
 ![image.png](wil%20md%20118ff3cfbdea80c9a36dd4088d1934e9/image%202.png)
 
 ![image.png](wil%20md%20118ff3cfbdea80c9a36dd4088d1934e9/image%203.png)
@@ -55,9 +57,13 @@ urlpattern에 경로 추가
 
 그리고 view 파일에서 index 생성하자
 
+### views.py
+
 ![image.png](wil%20md%20118ff3cfbdea80c9a36dd4088d1934e9/image%205.png)
 
 다음은 index.html 파일을 만들건데 questions안의 templates폴더를 생성하고 helloworld를 h1 태그로 만들자
+
+### index.html
 
 ![image.png](wil%20md%20118ff3cfbdea80c9a36dd4088d1934e9/image%206.png)
 
@@ -67,15 +73,20 @@ urlpattern에 경로 추가
 
 `python3 [manage.py](http://manage.py/) runserver`
 
+#에러해결
 계속 안되던데 그 이유는 내가 questions를 project 안에 안 만들었던 잘못;;
+위에 있는 것들 싹 다 경로가 잘못됨
 
 ![image.png](wil%20md%20118ff3cfbdea80c9a36dd4088d1934e9/image%208.png)
 
 드디어 돌아간다;;;
 
 ![image.png](wil%20md%20118ff3cfbdea80c9a36dd4088d1934e9/image%209.png)
+question 경로로 안 갔기 때문. 기본 경로에는 아무것도 없는 상태
 
 ![image.png](wil%20md%20118ff3cfbdea80c9a36dd4088d1934e9/image%2010.png)
+localhost:8000/questioins 로 가면 나온다. 우리가 만든 Index.html 내용
+
 
 ## 동적 html 생성
 
@@ -108,6 +119,10 @@ Pypass password validation and create user anyway? [y/N]: y
 
 ![image.png](wil%20md%20118ff3cfbdea80c9a36dd4088d1934e9/image%2016.png)
 
+localhost:8000/admin 으로 접속하면 로그인 창이 뜨고 우리가 설정한대로 로그인하면 
+
 ![image.png](wil%20md%20118ff3cfbdea80c9a36dd4088d1934e9/image%2017.png)
+
+우리가 만든 question 테이블이 잘 생성되어있음을 확인할 수 있다.
 
 ![image.png](wil%20md%20118ff3cfbdea80c9a36dd4088d1934e9/image%2018.png)
